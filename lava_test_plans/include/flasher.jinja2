@@ -3,6 +3,7 @@
 {% set use_context = true %}
 {% set DOCKER_IMAGE_DEPLOY = DOCKER_IMAGE_DEPLOY|default("debian:buster") %}
 {% set DOCKER_IMAGE_POSTPROCESS = DOCKER_IMAGE_POSTPROCESS|default("debian:buster") %}
+{% set IMAGE_FILE_NAME = IMAGE_FILE_NAME|default("rootfs.tar.gz") %}
 {% set apply_overlay = apply_overlay|default("rootfs") %}
 {% set use_download_headers = use_download_headers|default(false) %}
 {% set pre_boot_command = pre_boot_command|default(false) %}
