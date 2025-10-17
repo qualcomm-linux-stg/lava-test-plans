@@ -23,7 +23,7 @@
 "GST_IGNORE_TESTS_FILE": "variable-value"
 "PTEST_EXCLUDE": "variable-value"
 "QA_SERVER_PROJECT": "qa-server-project"
-"PROJECT": "projects/lt-qcom/"
+"PROJECT": "projects/meta-qcom/"
 "LXC_BOOT_FILE": ""
 "LXC_ROOTFS_FILE": ""
 "VIDEO_DEVICES" : {"/dev/video0": "venus-encoder", "/dev/video1": "venus-decoder"}

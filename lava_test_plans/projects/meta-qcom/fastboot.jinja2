@@ -7,7 +7,7 @@
 
 {% block metadata %}
   source: https://github.com/Linaro/lava-test-plans.git
-  path: projects/lt-qcom/
+  path: projects/meta-qcom/
 {% if OS_INFO == 'kernel' %}
 {% include PROJECT+"include/meta-qcom-"+OS_INFO+"-metadata.jinja2" %}
 {% else %}
@@ -130,7 +130,7 @@ protocols:
           - then
           -     configs_dir=$(mktemp -d /tmp/configs.XXXX)
           -     git clone --depth 1 http://git.linaro.org/ci/job/configs.git $configs_dir 
-          -     $configs_dir/lt-qcom-linux-test/copy_test_overlay.sh /lava-lxc/{{LXC_BOOT_FILE}} $overlay_file
+          -     $configs_dir/meta-qcom-linux-test/copy_test_overlay.sh /lava-lxc/{{LXC_BOOT_FILE}} $overlay_file
           -     lava-test-case "apply_test_overlay_bootimg" --result "pass"
           - else
           -     lava-test-case "apply_test_overlay_bootimg" --result "skip"
