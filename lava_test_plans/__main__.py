@@ -23,7 +23,7 @@ from jinja2 import (
     StrictUndefined,
     make_logging_undefined,
 )
-from jinja2.exceptions import UndefinedError, TemplateSyntaxError
+from jinja2.exceptions import UndefinedError, TemplateSyntaxError, TemplateNotFound
 from ruamel.yaml import YAML
 from ruamel.yaml.constructor import (
     DuplicateKeyError,
@@ -448,6 +448,12 @@ def main():
             logger.error("Trying to render: %s" % testpath)
             logger.error("\tissue: %s" % e.message)
             exit_code = 1
+        except TemplateNotFound as e:
+            logger.error("File not found")
+            logger.error(e.message)
+            exit_code = 1
+        if exit_code != 0:
+            return exit_code
         if args.dryrun and lava_job is not None:
             testpath = os.path.join(
                 output_path, args.device_type, os.path.basename(test)

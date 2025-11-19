@@ -24,7 +24,8 @@ def get_context(script_dirname, args_variables, args_overwrite_variables):
             variables = os.path.join(script_dirname, variables)
         try:
             context.update(ConfigObj(variables).dict())
-        except ConfigObjError:
+        except ConfigObjError as e:
+            logger.info(e)
             logger.info("Unable to parse .ini file")
             logger.info("Trying YAML")
             with open(variables, "r") as vars_file:
