@@ -8,20 +8,28 @@
 
 {# Define all tests with their details and pre-evaluate conditions #}
 {% set all_tests = [
-    {"name": "hotplug", "path": "Runner/suites/Kernel/Baseport/hotplug/hotplug.yaml"},
-    {"name": "CPUFreq_Validation", "path": "Runner/suites/Kernel/Baseport/CPUFreq_Validation/CPUFreq_Validation.yaml"},
-    {"name": "Interrupts", "path": "Runner/suites/Kernel/Baseport/Interrupts/Interrupts.yaml"},
-    {"name": "cdsp_remoteproc", "path": "Runner/suites/Kernel/Baseport/cdsp_remoteproc/cdsp_remoteproc.yaml"},
-    {"name": "adsp_remoteproc", "path": "Runner/suites/Kernel/Baseport/adsp_remoteproc/adsp_remoteproc.yaml"},
-    {"name": "WiFi_Firmware_Driver", "path": "Runner/suites/Connectivity/WiFi/WiFi_Firmware_Driver/WiFi_Firmware_Driver.yaml"},
-    {"name": "WiFi_OnOff", "path": "Runner/suites/Connectivity/WiFi/WiFi_OnOff/WiFi_OnOff.yaml"},
-    {"name": "OpenCV", "path": "Runner/suites/Multimedia/OpenCV/OpenCV.yaml"},
-    {"name": "irq", "path": "Runner/suites/Kernel/Baseport/irq/irq.yaml"},
-    {"name": "BT_ON_OFF", "path": "Runner/suites/Connectivity/Bluetooth/BT_ON_OFF/BT_ON_OFF.yaml"},
     {"name": "AudioRecord", "path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord.yaml"},
+    {"name": "AudioRecord_1","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config01.yaml"},
+    {"name": "AudioRecord_2","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config02.yaml"},
+    {"name": "AudioRecord_3","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config03.yaml"},
+    {"name": "AudioRecord_4","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config04.yaml"},
+    {"name": "AudioRecord_5","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config05.yaml"},
+    {"name": "AudioRecord_6","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config06.yaml"},
+    {"name": "AudioRecord_7","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config07.yaml"},
+    {"name": "AudioRecord_8","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config08.yaml"},
+    {"name": "AudioRecord_9","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config09.yaml"},
+    {"name": "AudioRecord_10","path": "Runner/suites/Multimedia/Audio/AudioRecord/AudioRecord_Config10.yaml"},
     {"name": "AudioPlayback", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
-    {"name": "Ethernet", "path": "Runner/suites/Connectivity/Ethernet/Ethernet.yaml"},
-    {"name": "DSP_AudioPD", "path": "Runner/suites/Multimedia/DSP_AudioPD/DSP_AudioPD.yaml"}
+    {"name": "AudioPlayback_1", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config01.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_2", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config02.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_3", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config03.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_4", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config04.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_5", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config05.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_6", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config06.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_7", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config07.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_8", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config08.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_9", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config09.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}},
+    {"name": "AudioPlayback_10", "path": "Runner/suites/Multimedia/Audio/AudioPlayback/AudioPlayback_Config10.yaml", "include": (AUDIO_CLIPS_URL is defined and AUDIO_CLIPS_URL), "params": {"AUDIO_CLIPS_BASE_DIR": "/home/AudioClips/"}}
 ] %}
 
 {% block test_target %}
