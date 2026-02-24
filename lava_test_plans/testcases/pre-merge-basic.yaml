@@ -35,6 +35,13 @@
         {{ param_key }}: "{{ param_value }}"
         {% endfor %}
       {% endif %}
+      {% if test.expected is defined and test.expected %}
+      expected:
+        {% for expected in test.expected|default([]) %}
+        - {{ expected }}
+        {% endfor %}
+      {% endif %}
+
     {% endif %}
     {% endfor %}
 {% endblock test_target %}
