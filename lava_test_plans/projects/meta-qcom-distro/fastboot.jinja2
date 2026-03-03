@@ -3,7 +3,7 @@
 {% set DEPLOY_TARGET = DEPLOY_TARGET|default("fastboot") %}
 {% set download_postprocess_required = false %}
 {% set DEPLOY_OS = "" %}
-{% set BUILD_OS = BUILD_OS|default("poky-altcfg") %}
+{% set BUILD_OS = BUILD_OS|default("nodistro") %}
 {% set BUILD_MACHINE = BUILD_MACHINE|default("qcom-armv8a") %}
 {% set DOCKER_IMAGE_POSTPROCESS = DOCKER_IMAGE_POSTPROCESS|default("ghcr.io/foundriesio/lava-lmp-sign:main") %}
 {% set BOOT_LABEL = "boot" %}
