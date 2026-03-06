@@ -6,10 +6,8 @@
 {# Get excluded tests list from device file #}
 {% set EXCLUDED_TESTS = EXCLUDED_TESTS|default([]) %}
 
-{# Conditional tags based on device type #}
-{% if device_type == "iq-9075-evk" %}
-{% set TAGS = ["pvt"] %}
-{% endif %}
+{# Add required tags #}
+{% set TAGS = ["has-bt"] %}
 
 {# Define all tests with their details and pre-evaluate conditions #}
 {% set all_tests = [
