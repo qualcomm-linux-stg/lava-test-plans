@@ -2,3 +2,5 @@
 
 {# Device-specific test exclusions for meta-qcom project #}
 {% set EXCLUDED_TESTS = ["fastrpc_test"] %}
+
+{% set flasher_device_type = "qrb2210" %}
