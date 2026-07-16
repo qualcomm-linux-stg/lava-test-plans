@@ -25,7 +25,7 @@ def generate_audio_clips_url():
                 "aws",
                 "s3",
                 "presign",
-                "s3://qcom-prd-gh-artifacts/qualcomm-linux/test-media-assets/AudioClips.tar.gz",
+                "s3://qli-prd-audior-gh-artifacts/AudioReach/AudioClips/AudioClips.tar.gz",
                 "--expires-in",
                 "196000",
             ],
